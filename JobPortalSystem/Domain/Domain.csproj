@@ -1,0 +1,95 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<!-- Exclude old AutoMapper folder contents from compilation -->
+	<ItemGroup>
+		<Compile Remove="Infrastructure\AutoMapper\**" />
+		<EmbeddedResource Remove="Infrastructure\AutoMapper\**" />
+		<None Remove="Infrastructure\AutoMapper\**" />
+	</ItemGroup>
+
+	<!-- Empty folders to keep in the project -->
+	<ItemGroup>
+
+		<!-- Admin -->
+		<Folder Include="Application\Features\Admin\DTO\" />
+		<Folder Include="Application\Features\Admin\Interfaces\" />
+		<Folder Include="Application\Features\Admin\Repositories\" />
+		<Folder Include="Application\Features\Admin\Services\" />
+
+		<!-- Chat -->
+		<Folder Include="Application\Features\Chat\DTO\" />
+		<Folder Include="Application\Features\Chat\Interfaces\" />
+		<Folder Include="Application\Features\Chat\Repositories\" />
+		<Folder Include="Application\Features\Chat\Services\" />
+
+		<!-- Login -->
+		<Folder Include="Application\Features\Login\DTO\" />
+		<Folder Include="Application\Features\Login\Interfaces\" />
+		<Folder Include="Application\Features\Login\Repositories\" />
+		<Folder Include="Application\Features\Login\Services\" />
+
+		<!-- SignUp -->
+		<Folder Include="Application\Features\SignUp\Interfaces\" />
+		<Folder Include="Application\Features\SignUp\Repositories\" />
+		<Folder Include="Application\Features\SignUp\Services\" />
+
+		<!-- Job -->
+		<Folder Include="Application\Features\Job\Interfaces\" />
+		<Folder Include="Application\Features\Job\Repositories\" />
+		<Folder Include="Application\Features\Job\Services\" />
+
+		<!-- Job Provider -->
+		<Folder Include="Application\Features\JobProvider\DTO\" />
+		<Folder Include="Application\Features\JobProvider\Interfaces\" />
+		<Folder Include="Application\Features\JobProvider\Repositories\" />
+		<Folder Include="Application\Features\JobProvider\Services\" />
+
+		<!-- Job Seekers -->
+		<Folder Include="Application\Features\JobSeekers\DTO\" />
+		<Folder Include="Application\Features\JobSeekers\Interfaces\" />
+		<Folder Include="Application\Features\JobSeekers\Repositories\" />
+		<Folder Include="Application\Features\JobSeekers\Services\" />
+
+		<!-- Profile -->
+		<Folder Include="Application\Features\Profile\DTO\" />
+		<Folder Include="Application\Features\Profile\Interfaces\" />
+		<Folder Include="Application\Features\Profile\Repositories\" />
+		<Folder Include="Application\Features\Profile\Services\" />
+
+		<!-- User -->
+		<Folder Include="Application\Features\User\DTO\" />
+		<Folder Include="Application\Features\User\Interfaces\" />
+		<Folder Include="Application\Features\User\Repositories\" />
+		<Folder Include="Application\Features\User\Services\" />
+
+		<!-- Infrastructure -->
+		<Folder Include="Infrastructure\AutoMapper\" />
+
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="12.0.1" />
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+		<PackageReference Include="MailKit" Version="4.2.0" />
+		<PackageReference Include="MassTransit" Version="8.1.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.5" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.11" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.11" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.11">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="MimeKit" Version="4.2.0" />
+		<PackageReference Include="SendGrid" Version="9.28.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="7.0.12" />
+	</ItemGroup>
+
+</Project>

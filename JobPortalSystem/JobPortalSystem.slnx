@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".gitignore" />
+  </Folder>
+  <Project Path="Domain/Domain.csproj" />
+  <Project Path="JobPortalSystem/JobPortalSystem.csproj" />
+</Solution>
